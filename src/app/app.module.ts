@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DetailsComponent } from './details/details.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +11,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    DetailsComponent,
+    HeroDetailComponent,
     HeroesComponent,
     HeroDetailComponent,
   ],

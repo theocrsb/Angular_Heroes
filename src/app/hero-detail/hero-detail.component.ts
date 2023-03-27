@@ -7,6 +7,6 @@ import { Hero } from '../interface.hero';
   styleUrls: ['./hero-detail.component.css'],
 })
 export class HeroDetailComponent {
-  // On recupere le hero select
+  // On recupere le 'hero' select
   @Input() hero?: Hero;
 }

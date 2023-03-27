@@ -12,15 +12,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div>id: {{ selectedHero.id }}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <!-- penser a importer FormsModule -->
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
-  </div>
-</div>
-
-<!-- on transmet le hero select a l'enfant hero-detail. Voir fichier hero-detail.ts -->
+<!-- on transmet le 'hero' select a l'enfant hero-detail. Voir fichier hero-detail.ts -->
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
