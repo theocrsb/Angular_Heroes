@@ -1,9 +1,6 @@
-export interface Heroes {
-  id: number;
-  name: string;
-}
+import { Hero } from './interface.hero';
 
-export const heroes: Heroes[] = [
+export const heroes: Hero[] = [
   { id: 12, name: 'Dr. Nice' },
   { id: 13, name: 'Bombasto' },
   { id: 14, name: 'Celeritas' },
