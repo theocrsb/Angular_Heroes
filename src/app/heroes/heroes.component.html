@@ -21,3 +21,6 @@
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
   </div>
 </div>
+
+<!-- on transmet le hero select a l'enfant hero-detail. Voir fichier hero-detail.ts -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

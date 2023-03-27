@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DetailsComponent } from './details/details.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+
 import { HeroesComponent } from './heroes/heroes.component';
 
 // app routing genere avec : 'ng generate module app-routing --flat --module=app'
@@ -10,7 +11,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'details/:id', component: DetailsComponent },
+  { path: 'details/:id', component: HeroDetailComponent },
 ];
 
 @NgModule({

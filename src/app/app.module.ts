@@ -7,6 +7,7 @@ import { DetailsComponent } from './details/details.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     DetailsComponent,
     HeroesComponent,
+    HeroDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
