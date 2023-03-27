@@ -18,3 +18,10 @@ button:hover {
   border: 0px;
   color: white;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}

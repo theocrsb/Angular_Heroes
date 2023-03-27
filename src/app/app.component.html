@@ -1,6 +1,9 @@
+<!-- Title prend sa valeur dans app.ts -->
 <h1>{{ title }}</h1>
+<!-- Nos routerLink nous donne la navigation grace à app-routing -->
 <div>
-  <a><button>Dashboard</button></a>
-  <a><button>Heroes</button></a>
+  <a routerLink="/dashboard"><button>Dashboard</button></a>
+  <a routerLink="/heroes"><button>Heroes</button></a>
 </div>
+<!-- Element de navigation afficher en dessous -->
 <router-outlet></router-outlet>
