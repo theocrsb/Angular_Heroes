@@ -8,8 +8,9 @@ import { Observable, of } from 'rxjs';
 })
 export class HeroService {
   constructor() {}
+  // Observable pour une requete async
   getHeroes(): Observable<Hero[]> {
-    const heroesAll = of(heroes);
-    return heroesAll;
+    const heroesRequest = of(heroes);
+    return heroesRequest;
   }
 }
