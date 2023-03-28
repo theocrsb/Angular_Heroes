@@ -5,6 +5,7 @@
       [class.selected]="hero === selectedHero"
       type="button"
       (click)="onSelect(hero)"
+      routerLink="/details/{{ hero.id }}"
     >
       <span class="badge">{{ hero.id }}</span>
       <span class="name">{{ hero.name }}</span>
@@ -13,4 +14,4 @@
 </ul>
 
 <!-- on transmet le 'hero' select a l'enfant hero-detail. Voir fichier hero-detail.ts -->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->

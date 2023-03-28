@@ -9,6 +9,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 // Création des routes
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'details/:id', component: HeroDetailComponent },

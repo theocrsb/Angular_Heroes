@@ -1,27 +1,34 @@
-import { Component } from '@angular/core';
-// Retrait de l'import direct. On passe desormais par le service
-// import { heroes } from '../heroes';
+import { Component, OnInit } from '@angular/core';
+
 import { Hero } from '../interface.hero';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
 })
-export class HeroesComponent {
+export class HeroesComponent implements OnInit {
+  selectedHero?: Hero;
+
   heroes: Hero[] = [];
-  constructor(private heroService: HeroService) {}
-  // subscribe pour gerer l'async
-  getHeroes(): void {
-    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
-  }
+
+  constructor(
+    private heroService: HeroService,
+    private messageService: MessageService
+  ) {}
+
   ngOnInit(): void {
     this.getHeroes();
   }
 
-  selectedHero?: Hero;
-  // on attribu le hero select pour le l'afficher
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
 }

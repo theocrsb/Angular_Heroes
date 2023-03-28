@@ -1,12 +1,6 @@
-<div>
-  <h2>Top Heroes</h2>
-  <div class="flex">
-    <div *ngFor="let hero of heroes">
-      <a routerLink="/details/{{ hero.id }}">
-        <button>
-          <h3>{{ hero.name }}</h3>
-        </button>
-      </a>
-    </div>
-  </div>
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes" routerLink="/details/{{ hero.id }}">
+    {{ hero.name }}
+  </a>
 </div>
